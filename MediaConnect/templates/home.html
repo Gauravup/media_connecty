@@ -1,0 +1,348 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Degree Media Connect</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+   <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="{% static 'images/3602.jpg' %}" alt="Logo"></a>
+        </div>
+        <button class="navbar-toggler" onclick="toggleNavbar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <!-- About Dropdown -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'about' %}">Introduction</a>
+                    <a href="{% url 'team' %}">Light House</a>
+                </div>
+            </li>
+            <!-- Web Development Dropdown -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Web Development</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'web_dev' %}">Website Design</a>
+                    <a href="">Web Hosting</a>
+                </div>
+            </li>
+            <!-- Services Dropdown -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Services</a>
+                <div class="dropdown-content scroll">
+                    <a href="{% url 'offline' %}">Offline Marketing</a>
+                    <a href="{% url 'online' %}">Online Marketing</a>
+                    <a href="{% url "funding" %}">Funding</a>
+                </div>
+            </li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="{% url 'inquiry' %}">Inquiry</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+
+     <div class="image" id="home" >
+        <img src="{% static 'images/full logo.png' %}">
+    </div>
+
+     <!-- =================== rooms ========================================================================= -->
+     <div class="service" id="rooms" id="services1" >
+        <h2 id="online">Our Services </h2>
+    </div>
+    <div class="room-cards">
+        <div class="card-body">
+            <img src="{% static 'images/Start-Ups.jpg' %}" alt="card img">
+            
+            <h2 >Startup Business</h2><br>
+            <span>In todays Digital Marketing World people say a website’s design is their number one criterion for determining the credibility of a company.</span>
+            <button>Access</button>
+        </div>
+        <div class="card-body">
+            <img src="{% static 'images/corporate.webp' %}" alt="card img">
+            
+            <h2>Corporate Business</h2><br>
+            <span>We help larger organizations to use the web to communicate their missions, drive sales-ready opportunities demonstrate thought leadership.</span>
+            <button>Access</button>
+        </div> 
+        <div class="card-body">
+            <img src="{% static 'images/sme.png' %}" alt="card img">
+            
+            <h2>SME Business</h2><br>
+            <span>In todays Digital Marketing World people say a website’s design is their number one criterion for determining the credibility of a company..</span>
+            <button>Access</button>
+        </div>
+        <div class="card-body" >
+            <img src="{% static 'images/web development.jpg' %}" alt="card img">
+            
+            <h2>Website Development</h2><br>
+            <span>Web Development is a broad term for the work involved in developing a web site for the Internet..</span>
+             <a href="{% url 'web_dev' %}" style="text-decoration: none;"> <button>  Access</button> </a>
+        </div> 
+        {% comment %} card section 2================================================== {% endcomment %}
+        <div class="card-body">
+            <img src="{% static 'images/ecommerce.jpg' %}" alt="card img">
+            
+            <h2>E-Commerce Website</h2><br>
+            <span>Stay Digitally Competitive with Reliable E-Commerce Website Development Service provided by 360 Degree Media Connect..</span>
+            <button>Access</button>
+        </div> 
+        <div class="card-body">
+            <img src="{% static 'images/social-m2.webp' %}" alt="card img">
+            
+            <h2>Social Media Marketing</h2><br>
+            <span>Hire us to grow your social media followers, leads and sales with our top-quality social media marketing services ..</span>
+            <button>Access</button>
+        </div> 
+        <div class="card-body">
+            <img src="{% static 'images/web Hosting.jpg' %}" alt="card img">
+            
+            <h2>Web Hosting</h2><br>
+            <span>Powerful Hosting Servers Located in US & India .Easy to Use cPanel & 1-Click CMS Install.</span>
+            <button>Access</button>
+        </div> 
+        <div class="card-body">
+            <img src="{% static 'images/seo2.webp' %}" alt="card img">
+            
+            <h2>Google SEO</h2><br>
+            <span>SEO means Search Engine Optimization. In the simplest of terms, good SEO optimizes your visibility online..</span>
+            <button>Access</button>
+        </div> 
+    </div> 
+<!-- =================== services ================================================================================= -->
+<div class="container">
+    <div class="service" id="offline">
+        <h2 >Our Experties</h2>
+    </div>
+    <br>
+    <div class="our-services" >
+        <div class="service-body">
+            <img src=" {% static 'images/offline icon.png' %}" alt="" >
+           
+            <h3 title="">Offline Marketing</h3>
+        </div>
+        <div class="service-body">
+            <img src="{% static 'images/corporate Wellness.png' %}" alt="" ><p></p>
+            
+            <h3 title="">Corporate Wellness</h3>
+        </div>
+        <div class="service-body">
+            <img src="{% static 'images/community.png' %}" alt="" id="funding">
+            
+            <h3 title="">Community</h3>
+        </div>
+        {% comment %} <div class="service-body">
+            <img src="{% static 'images/online-marketing.png' %}" alt="">
+            
+            <h3 title="">Online Marketing</h3>
+        </div> {% endcomment %}
+    </div>
+<br>
+</div>
+<br>
+<!-- ==================================================== our funding for you section  ================================  -->
+<div class="service" id="dining">
+    <h2>All Types Of Funding</h2>
+</div>
+
+<div class="card-container">
+    <div class="card">
+        <img src="{% static 'images/personal loan.jpg' %}" alt="Image 1">
+        <h2>Personal Loan</h2>
+        <p>A personal loan is a financial product that allows a person to borrow money from a lender. It is also known as a consumer loan.</p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/HomeLoan-Eligibility.avif' %}" alt="Image 2">
+        <h2>Home Loan</h2>
+        <p>A home loan is a secured loan that is obtained to purchase a property by offering it as collateral..</p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/business-loan-1.webp' %}" alt="Image 3">
+        <h2>Business Loan</h2>
+        <p>A business loan is a financial product that allows a business to borrow money for operating costs, expansion, and other business needs</p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+</div>
+
+{% comment %}  {% endcomment %}
+{% comment %}===================================funding section 2 ========================== {% endcomment %}
+
+<div class="card-container">
+    <div class="card">
+        <img src="{% static 'images/mortgage.jpg' %}" alt="Image 1">
+        <h2>Mortgage Loan</h2>
+        <p>A simple-interest mortgage is calculated daily, which means that the amount to be paid every month will vary slightly..</p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/project funding.jpeg' %}" alt="Image 2">
+        <h2>Project Funding</h2>
+        <p>It means a loan obtained for fulfilling the finances that a new project brings along with it.</p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/Car-loan.webp' %}" alt="Image 3">
+        <h2>Car Loan</h2>
+        <p>A Vehicle Loan is a loan that allows you to purchase two and four wheelers for personal use. </p>
+        <a href="{% url "funding" %}" class="button">Learn More</a>
+    </div>
+</div>
+<br><br><br><br>
+
+<!-- ================footer=========================================== -->
+<footer class="hotel-footer" id="about">
+    <div class="footer-container">
+        <!-- Hotel Info -->
+        <div class="footer-section hotel-info">
+            <h2>360 ᴅᴇɢʀᴇᴇ ᴍᴇᴅɪᴀ ᴄᴏɴɴᴇᴄᴛ</h2>
+            <p>360 Degree Media Connect  is a professional web development company since, 2015. Our Services focus on reaching your target audience & thus retaining your customers. Our service include Website Designing, Website Development, Google SEO, Payment Gateway Integration, Google Adwords , 
+                Email and Website Hosting. Our wide range of services makes sure to approach your target audience in the best possible manner.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+            <h2><strong>Address</strong></h2>
+            <ul>
+                
+                <li><p> ASHWINI CHS ,ROOM NO 4, POONA LINK ROAD, HANUMAN NAGAR, KATEMANIVALI NAKA, KALYAN (EAST) 421306</p></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section social-media">
+            <h2>Follow Us</h2>
+            <p>Stay connected with us through social platforms.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/19xm1QQsyH/"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="mailto:amitghadge@360degreemediaconnect.com" target="_blank">
+                    <img src="https://img.icons8.com/fluent/48/000000/email.png" alt="Email">
+                  </a>
+                  
+                <a href="https://www.instagram.com/360_degree_media_connect?igsh=MWs5bGowa3JtcGZmeg%3D%3D"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/105768130/admin/dashboard/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/919769683658" target="_blank">
+                    <img src="https://img.icons8.com/fluent/48/000000/whatsapp.png" alt="WhatsApp">
+                </a>
+                
+                
+                
+            </div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="footer-section newsletter">
+            <h2>Contact Us</h2>
+            <p>Get in touch Easily with us.</p>
+            {% comment %} <p><strong>Email:</strong> info@luxestay.com</p> {% endcomment %}
+            <p><strong>Phone:</strong> 9769683658</p>
+            <p><strong>Phone:</strong> 7977798573</p>
+            <p><strong>Phone:</strong> 9769565679</p>
+            
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p> 360 Degree Media Connect. All Rights Reserved.&copy; 2025</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} scroll event {% endcomment %}
+<script>
+    // Function to add smooth scrolling effect when a link is clicked
+document.querySelectorAll(".scroll a, .nav-links a,").forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the target element's ID from the href attribute (e.g., #offline)
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            // Scroll to the target element smoothly
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

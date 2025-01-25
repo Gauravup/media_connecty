@@ -1,0 +1,168 @@
+{% load static %}
+{% include "nav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Engagement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: larger;
+            background-color: #f9f9f9;
+            margin: 0;
+            background-image: url("{% static 'images/background.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height:100vh;
+            background-attachment: fixed;
+        }
+    
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+    
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+    
+        .sub-headings {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        h2 {
+    position: relative;
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover {
+    cursor: pointer;
+    color: #007bff; /* Highlight color */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Add a glowing underline effect */
+h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00f, #0ff, #00f); /* Glowing effect */
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+h2:hover::after {
+    width: 100%; /* Full underline on hover */
+    left: 0; /* Align underline with text */
+}
+
+/* Add a subtle shadow effect for hover */
+h2:hover {
+    text-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+    
+        .sub-headings li {
+            font-size: 1.5rem;
+            color: #555;
+            margin: 40px 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            display: inline-block;
+            width: 30%; /* Adjust width for alignment */
+        }
+    
+        .sub-headings li:nth-child(1),
+        .sub-headings li:nth-child(2),
+        .sub-headings li:nth-child(3) {
+            animation: fadeInUp 1s forwards;
+            animation-delay: 2s; /* Delay for the first set */
+        }
+    
+        .sub-headings li:nth-child(2) {
+            animation-delay: 2.2s;
+        }
+    
+        .sub-headings li:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+    
+        .sub-headings li:nth-child(4),
+        .sub-headings li:nth-child(5),
+        .sub-headings li:nth-child(6) {
+            animation: fadeInUp 1s forwards;
+            animation-delay: 3s; /* Delay for the second set */
+        }
+    
+        .sub-headings li:nth-child(5) {
+            animation-delay: 3.2s;
+        }
+    
+        .sub-headings li:nth-child(6) {
+            animation-delay: 3.4s;
+        }
+    
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1 class="main-heading" id="mainHeading">All Types Of Funding</h1>
+            <ul class="sub-headings" id="subHeadings">
+                <li><h2>Home Loan</h2></li>
+                <li><h2>Mortgage Loan</h2></li>
+                <li><h2>Personal Loan</h2></li>
+                <li><h2>Business Loan</h2></li>
+                <li><h2 title="Search engine optimization">Project Funding</h2></li>
+                <li><h2>Car Loan</h2></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script>
+        window.onload = () => {
+            const subHeadings = document.querySelectorAll('.sub-headings li');
+
+            subHeadings.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 300); // Add a delay for each item
+            });
+        };
+    </script>
+
+</body>
+</html>

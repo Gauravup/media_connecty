@@ -1,0 +1,129 @@
+{% load static %}
+{% include "nav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 Degree Media Connect/About Page</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("{% static 'images/background.jpg' %}");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .section {
+      background: transparent;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      color: rgb(231, 59, 153);
+      position: relative;
+      z-index: 1; /* Keeps sections above the background */
+    }
+
+    .section h2 {
+    text-align: center; /* Centers the text horizontally */
+  }
+
+  .section p{
+    color: black;
+    font-size: 25px;
+  }
+
+    /* Section 1: Hover effect - Scale */
+    .section:nth-child(1):hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section 2: Hover effect - Rotate */
+    .section:nth-child(2):hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section 3: Hover effect - Change Background Color */
+    .section:nth-child(3):hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section 4: Hover effect - Border Glow */
+    .section:nth-child(4):hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+    {% comment %} <div class="image" id="home" >
+        <img src="{% static 'images/Screenshot (85).png' %}">
+    </div> {% endcomment %}
+  <div class="container">
+    <div class="section">
+      <h2>Introduction</h2>
+      <p>
+        •	<b>Welcome to 360 Degree Media Connect</b>, your one-stop solution for comprehensive marketing and funding services. We specialize in delivering cutting-edge digital marketing strategies, facilitating strategic corporate tie-ups, enhancing community engagement, and offering personalized one-to-one marketing solutions. Along with our marketing expertise, we also provide a wide range of financial services, including home loans, mortgage loans, personal loans, business loans, car loans, and project funding. 
+        Our commitment is to bring the best of both worlds – marketing and finance – under one roof to empower businesses and individuals alike.
+        <br>
+        •	<b>At 360 Degree Media Connect</b>, we prioritize providing top-quality services that meet your needs at affordable prices. Whether you're looking to grow your brand, secure funding,
+         or enhance your customer outreach, we are here to help you achieve your goals seamlessly and cost-effectively.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Our Vision</h2>
+      <p>
+        To be the most trusted and innovative partner for businesses and individuals, offering integrated marketing and funding solutions that drive growth, 
+        foster meaningful connections, and ensure financial empowerment—all at the most competitive prices.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission at <b>360 Degree Media Connect</b> is to provide a holistic suite of marketing and financial services that cater to the unique needs of every client. We aim to:
+        Deliver <b>innovative digital marketing solutions</b> that maximize brand visibility and engagement.
+        Foster <strong>strategic corporate partnerships</strong> that open new avenues for growth and expansion.
+        Create lasting <b>community engagement</b> initiatives that build trust and loyalty.
+        Offer <b>personalized one-to-one marketing </b>that ensures each client’s voice is heard and valued.
+        Provide <strong>accessible and affordable funding</strong> options to help businesses and individuals achieve their financial goals.
+        
+      </p>
+    </div>
+    <div class="section">
+      <h2>Our Team</h2>
+      <p>
+        Our team of dedicated professionals is committed to driving growth and success through collaboration and expertise.
+      </p>
+      <button type="button" class="btn btn-success" onclick="location.href='{% url 'team' %}'">Visit My Team</button>
+      <button type="button" class="btn btn-outline-success" onclick="location.href='{% url 'home' %}'">Home Page</button>
+
+    </div>
+  </div>
+</body>
+</html>
